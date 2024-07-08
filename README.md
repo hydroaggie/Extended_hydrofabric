@@ -1,4 +1,4 @@
-# Extended_hydrofabric
+# Extended Hydrofabric
 
 This project aims to improve water management modeling by integrating water management models (WMMs) with hydrologic models using extended hydrofabric and optional databases. The goal is to address the limitations of current hydrologic models, such as the USGS National Hydrologic Model (NHM), which do not adequately account for human activities like water diversions, and reservoir management. By incorporating these elements, the extended hydrofabric will enhance streamflow prediction and watershed management.
 
