@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS Variables (
 # Create table for Values
 cursor.execute('''
 CREATE TABLE IF NOT EXISTS POI_Values (
-    ValueID INTEGER PRIMARY KEY,
+    ValueID INTEGER PRIMARY KEY AUTOINCREMENT,
     DataValue REAL,
     LocalDateTime TEXT,
     POIID INTEGER,
