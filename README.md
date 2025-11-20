@@ -1,8 +1,109 @@
-# Extended Hydrofabric
+# Extended Hydrofabric: Reproducible Workflows for Water Management Modeling
 
-This project aims to improve water management modeling by integrating water management models (WMMs) with hydrologic models using extended hydrofabric and optional databases. The goal is to address the limitations of current hydrologic models, such as the USGS National Hydrologic Model (NHM), which do not adequately account for human activities like water diversions, and reservoir management. By incorporating these elements, the extended hydrofabric will enhance streamflow prediction and watershed management.
+This repository contains the full set of Jupyter notebooks, workflows, and scripts used to generate the **Extended Hydrofabric** and the associated **relational database** for the Upper Colorado River Basin (UCRB). These workflows enable automated integration of reservoir operations, diversion points, water rights metadata, and other water-management information directly into the national reference hydrofabric framework.
 
-## Key Components
-* Extended Hydrofabric: Including water management infrastructure
-* Optional Databases: A comprehensive relational database for water management data connected to the Extended Hydrofabric.
-* Software Tools: open-source tools for efficient preparation of Extended hydrofabric, optional databases, and WMM inputs.
+
+## Overview
+
+Large-scale Water Management Models (WMMs) require standardized, model-ready data describing:
+
+- Reservoir operations  
+- Diversion points  
+- Water rights and administrative metadata  
+- Streamflow gages  
+- Hydrologic network topology  
+
+The **Extended Hydrofabric** expands the reference hydrofabric by adding these missing water-management elements, linking all features to persistent `comid` identifiers for plug-and-play use with hydrologic models (e.g., NHM, NWM) and WMMs (e.g., MODSIM, PyWR).
+
+
+### Included
+- Jupyter notebooks demonstrating:
+  - Automated extension of the hydrofabric  
+  - Construction and population of the relational database  
+  - Querying and exporting model-ready features for WMM setup
+
+
+- Database schema diagrams and documentation
+
+### Not Included (User Must Download)
+❗ **Raw source datasets** — see the “Required Datasets” section below.
+
+---
+
+
+## 📂 Repository Structure
+
+````
+├── data
+│   ├── Diversions
+│   ├── GageLoc
+│   ├── output
+│   ├── reference fabric gpkg
+│   ├── reservoirs
+│   ├── USGS (Lopez) Demands
+│   ├── wade data
+│   └── wbd
+├── Documentation
+│   └── Documentation.pdf
+├── examples
+│   ├── aggregated_diversions_example.csv
+│   ├── PODs.ipynb
+│   ├── reservoirs.ipynb
+│   └── usgs_gages.ipynb
+├── extended_hydrofabric.ipynb
+├── README.md
+└── relational_database.ipynb
+````
+
+## 📥 Required External Datasets
+
+Before running any notebook, **users must download the raw datasets** and place them into the data folder.
+
+Box Folder: https://usu.box.com/s/uxk5avw54hcrikyjpwpopl3z6whhzg7i
+
+## ▶️ Getting Started
+
+### 1. Add raw datasets into the `data/` directory
+Follow the directory layout above.
+
+### 2. Run notebooks in this order
+1. **extended_hydrofabric.ipynb**  
+   - Builds reservoir & POD layers  
+   - Assigns GNIS/name/stream-order fallbacks  
+   - Creates Extended Hydrofabric GeoPackage  
+   - Links everything to reference hydrofabric `comid` 
+
+2. **relational_database.ipynb**  
+   - Builds schema  
+   - Populates reservoir time series, diversion data, water rights  
+    
+
+3. **query_examples.ipynb**  
+   - Demonstration of querying  
+   - Exporting model-ready WMM components 
+
+
+## 🗄️ Outputs
+
+### 1. Extended Hydrofabric GeoPackage
+Includes:
+- Full reference hydrofabric (unchanged)  
+- Added layers:
+  - `reservoir_points`
+  - `diversion_points`
+- All features linked to flow network via `SOURCE_COMID`
+
+### 2. Relational Database (SQLite)
+Contains:
+- POI tables  
+- Water rights tables  
+- Reservoir daily storage/outflow/inflow  
+- Diversion time series  
+
+
+## 📧 Contact
+
+**Ehsan Ebrahimi**  
+Utah Water Research Laboratory  
+Utah State University  
+Email: ehsan.ebrahimi@usu.edu

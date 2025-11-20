@@ -1,0 +1,11 @@
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
