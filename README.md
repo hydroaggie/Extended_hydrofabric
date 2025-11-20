@@ -59,6 +59,8 @@ The **Extended Hydrofabric** expands the reference hydrofabric by adding these m
 
 Before running any notebook, **users must download the raw datasets** and place them into the data folder.
 
+Box Folder: https://usu.box.com/s/uxk5avw54hcrikyjpwpopl3z6whhzg7i
+
 ## ▶️ Getting Started
 
 ### 1. Add raw datasets into the `data/` directory
