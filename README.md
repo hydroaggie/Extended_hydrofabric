@@ -61,12 +61,29 @@ Before running any notebook, **users must download the raw datasets** and place 
 
 Box Folder: https://usu.box.com/s/uxk5avw54hcrikyjpwpopl3z6whhzg7i
 
+USGS Reference Hydrofabric Version: v2.0
+
 ## ▶️ Getting Started
 
 ### 1. Add raw datasets into the `data/` directory
 Follow the directory layout above.
 
-### 2. Run notebooks in this order
+### 2. Environment Setup
+Tested with Python 3.12.3
+
+Create and activate a virtual environment:
+
+``` bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt 
+```
+
+### 3. Run notebooks in this order
+
+⚠️ Notebooks must be run from the repository root directory so that local modules are correctly resolved.
+
+
 1. **extended_hydrofabric.ipynb**  
    - Builds reservoir & POD layers  
    - Assigns GNIS/name/stream-order fallbacks  
