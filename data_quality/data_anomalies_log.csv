@@ -1,0 +1,4 @@
+﻿No.,Layer,fid,ID,POI_NATIVE_ID,SOURCE_COMID,Issue_Category,Hydrologically Correct,Description
+1,DIVERSION_POINTS,504,2800719,2800719,1235213,Wrong matched SOURCE_COMID,No,"Naming issue in WATER_SOURCE, should be matched to 1235223"
+2,DIVERSION_POINTS,1234,wadeID6303,0409MBAG,3193966,Wrong matched SOURCE_COMID,NO,"Naming/ID issue in reference hydrofabric flowline_segment , should be matched to 3193962"
+3,DIVERSION_POINTS,1281,wadeID2328,1005,18348035,Wrong matched SOURCE_COMID,Yes,"No WATER_SOURCE, matched through tier 3. should be matched to 18350331"
