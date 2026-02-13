@@ -50,8 +50,14 @@ The **Extended Hydrofabric** expands the reference hydrofabric by adding these m
 │   ├── PODs.ipynb
 │   ├── reservoirs.ipynb
 │   └── usgs_gages.ipynb
+├── data_quality
+│   ├── data_anomalies_log.csv
+│   ├── README.md
 ├── extended_hydrofabric.ipynb
+├── extended_hydrofabric_functions.py
 ├── README.md
+├── requirements.in
+├── requirements.txt
 └── relational_database.ipynb
 ````
 
