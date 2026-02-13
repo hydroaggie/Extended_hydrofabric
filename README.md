@@ -67,7 +67,7 @@ Before running any notebook, **users must download the raw datasets** and place 
 
 Box Folder: https://usu.box.com/s/uxk5avw54hcrikyjpwpopl3z6whhzg7i
 
-USGS Reference Hydrofabric Version: v2.0
+USGS Reference Hydrofabric Version: v1.4
 
 ## ▶️ Getting Started
 
